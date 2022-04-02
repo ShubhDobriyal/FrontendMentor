@@ -1,4 +1,4 @@
-`Frontend Projects here -> [https://shubhdobriyal.github.io/FrontendMentor/](https://shubhdobriyal.github.io/FrontendMentor/)`
+Frontend Projects here -> [https://shubhdobriyal.github.io/FrontendMentor/](https://shubhdobriyal.github.io/FrontendMentor/)
 
 # Hi👋
 
