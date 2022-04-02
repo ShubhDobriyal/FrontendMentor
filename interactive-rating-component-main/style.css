@@ -1,0 +1,134 @@
+:root {
+  /* Colors */
+  --clr-primary-orange: hsl(25, 97%, 53%);
+  --clr-neutral-white: hsl(0, 0%, 100%);
+  --clr-neutral-light-grey: hsl(217, 12%, 63%);
+  --clr-neutral-md-grey: hsl(216, 12%, 54%);
+  --clr-neutral-blue: hsl(213, 19%, 18%);
+  --clr-neutral-dark-blue: hsl(216, 12%, 8%);
+  /* Typography */
+  --primary-font-family: "Overpass", sans-serif;
+}
+
+body {
+  font-family: var(--primary-font-family);
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--clr-neutral-white);
+  background-color: var(--clr-neutral-dark-blue);
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  transition: all 0.25s ease-in-out;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+.card {
+  max-width: 335px;
+  background-color: var(--clr-neutral-blue);
+  padding: 2rem 1.5rem;
+  border-radius: 1rem;
+  display: none;
+}
+
+.card__icon {
+  min-width: 3rem;
+  min-height: 3rem;
+  border-radius: 50%;
+  background-color: hsl(213deg 19% 20%);
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card p {
+  color: var(--clr-neutral-md-grey);
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1.5em 0;
+}
+
+li {
+  background-color: hsl(213deg 19% 20%);
+  min-width: 3rem;
+  min-height: 3rem;
+  border-radius: 100%;
+  display: grid;
+  place-items: center;
+  color: var(--clr-neutral-md-grey);
+  cursor: pointer;
+  font-weight: 700;
+}
+
+li:hover {
+  background-color: var(--clr-neutral-light-grey);
+  color: var(--clr-neutral-white);
+}
+
+button {
+  display: block;
+  color: var(--clr-neutral-white);
+  width: 100%;
+  border-radius: 2rem;
+  background-color: var(--clr-primary-orange);
+  border: none;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  padding: 1.2em;
+  cursor: pointer;
+  font-weight: 700;
+  font-family: var(--primary-font-family);
+}
+
+button:hover {
+  background-color: var(--clr-neutral-white);
+  color: var(--clr-primary-orange);
+}
+
+.active {
+  background-color: var(--clr-neutral-white);
+  color: var(--clr-primary-orange);
+}
+
+.text-center {
+  text-align: center;
+}
+.pill {
+  background-color: hsl(213deg 19% 20%);
+  color: var(--clr-primary-orange) !important;
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5em 1em;
+  border-radius: 2rem;
+  line-height: normal;
+}
+
+.d-block {
+  display: block !important;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 375px) {
+}
+
+@media screen and (min-width: 1440px) {
+}
