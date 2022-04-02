@@ -1,0 +1,49 @@
+:root{
+  --clr-light-cyan: hsl(193, 38%, 86%);
+  --clr-neon-green: hsl(150, 100%, 66%);
+
+  --clr-grayish-blue: hsl(217, 19%, 38%);
+  --clr-dark-grayish-blue: hsl(217, 19%, 24%);
+  --clr-dark-blue: hsl(218, 23%, 16%);
+
+  --primary-font: 'Manrope', sans-serif;
+}
+
+
+body{
+  font-family: var(--primary-font);
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  place-items: center;
+  font-size: 1rem;
+  background-color: var(--clr-dark-blue);
+  box-sizing: border-box;
+  color: var(--clr-light-cyan);
+  text-align: center;
+}
+
+*,*::before,*::after{
+  box-sizing: inherit;
+}
+
+article{
+  background-color: var(--clr-dark-grayish-blue);
+  width: 90%;
+  border-radius: 0.6rem;
+  margin: 1rem auto;
+  padding: 1rem;
+}
+
+.advice-meta{
+  color: var(--clr-neon-green);
+  text-transform: uppercase;
+  letter-spacing: .2rem;
+  font-size: 0.8rem;
+}
+
+.quote{
+  font-size: 28px;
+  font-weight: 800;
+}
