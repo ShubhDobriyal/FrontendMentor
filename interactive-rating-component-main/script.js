@@ -1,33 +1,41 @@
 window.addEventListener('load', function(){
-
-    const thankyouHtml = (ratingValue) => {
     const card = document.querySelector('.card');
-    card.innerHTML = '';
-    card.classList.add('text-center');
-    let thankyouIcon = document.createElement('img');
-    thankyouIcon.setAttribute('src','images/illustration-thank-you.svg');
-    thankyouIcon.classList.add('d-block');
-    let ratingPill = document.createElement('p')
-    ratingPill.innerText = `You selected ${ratingValue} out of 5`;
-    ratingPill.classList.add('pill');
-    let h2 = document.createElement('h2');
-    h2.innerText = 'Thank you!';
-    let p = document.createElement('p');
-    p.innerText = "We appreciate you taking the time to give a rating. If you ever need more support, don't hesitate to get in touch!";
 
-    card.appendChild(thankyouIcon);
-    card.appendChild(ratingPill);
-    card.appendChild(h2);
-    card.appendChild(p);
-  }
+    //Function to generate thankyou content
+    const thankyouHtml = (ratingValue) => {
+      
+      card.innerHTML = '';//Empty content of the card so that thankyou content can be added to inside card
+      card.classList.add('text-center');//Center the content inside card
+      /**** Thankyou content ****/
+      //Thankyou icon
+      let thankyouIcon = document.createElement('img');
+      thankyouIcon.setAttribute('src','images/illustration-thank-you.svg');
+      thankyouIcon.classList.add('d-block');
+      //Thankyou pill that will display the ratings
+      let ratingPill = document.createElement('p')
+      ratingPill.innerText = `You selected ${ratingValue} out of 5`;
+      ratingPill.classList.add('pill');
+      //Thankyou title
+      let h2 = document.createElement('h2');
+      h2.innerText = 'Thank you!';
+      //Thankyou content
+      let p = document.createElement('p');
+      p.innerText = "We appreciate you taking the time to give a rating. If you ever need more support, don't hesitate to get in touch!";
 
-  const isRatingSet = localStorage.getItem('rating');
+      //Append the thankyou elements to card
+      card.appendChild(thankyouIcon);
+      card.appendChild(ratingPill);
+      card.appendChild(h2);
+      card.appendChild(p);
+    }
 
-  if(isRatingSet){
+  const isRatingSet = localStorage.getItem('rating'); //Fetching the value of rating key from local storage
+
+  if(isRatingSet){// if rating key exists in local storage then show the thankyou card
     thankyouHtml(isRatingSet);
-    document.querySelector('.card').classList.add('d-block');
-  }else{
-    document.querySelector('.card').classList.add('d-block');
+    card.classList.add('d-block');
+  }else{// if rating key does not exists in local storage then show the ratings card
+    card.classList.add('d-block');
       let ratingValues = document.querySelectorAll('li');
 
     ratingValues.forEach(function(ratingValue) {
